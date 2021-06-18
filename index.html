@@ -1,109 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Component Library</title>
-</head>
-<body>
-<!-- Level 1 Heading. There are 6 levels which move in descending order i.e. from 1 to 6 -->
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Level 1 Heading. There are 6 levels which move in descending order i.e. from 1 to 6 -->
     <h1>Shivam's component library</h1>
-<!-- Normal-sized text -->
-    <p>I am attending neog.camp and I am making a component library which can be reused in other projects of mine.</p>
-<!-- Thematic break i.e. a line break with visible theming -->
-    <hr>
-    
+    <!-- Normal-sized text -->
+    <p>
+      I am attending neog.camp and I am making a component library which can be
+      reused in other projects of mine.
+    </p>
+    <!-- Thematic break i.e. a line break with visible theming -->
+    <hr />
+
     <h2>@typography</h2>
-    
+
     <h1>This is the biggest heading</h1>
     <h2>This is second biggest heading</h2>
+    <h3>This is even smaller heading</h3>
     <h6>This is the smallest heading, you would ever encounter</h6>
-<!-- Even smaller than regular-sized text -->
+    <!-- Even smaller than regular-sized text -->
     <small>This is even smaller than regular-sized text</small>
-    <hr>
+    <hr />
 
     <h2>@container</h2>
     <h3>fluid container</h3>
-    <div>This is a fluid container, and it will go till the end of the page.</div>
+    <div class="container-fluid">
+      This is a fluid container, and it will go till the end of the page. Lorem
+      ipsum dolor sit amet, consectetur adipisicing elit. Rem minima quaerat
+      veniam vel quibusdam ea perspiciatis voluptate, consequuntur dolore ipsum
+      at quod accusantium accusamus odio, optio dolores quo enim suscipit. Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Delectus fugiat
+      consequuntur magnam voluptas porro aspernatur omnis exercitationem,
+      tempora optio, unde inventore, veniam debitis harum? Dolores maxime
+      incidunt inventore rem ad?
+    </div>
     <h3>center container</h3>
-    <div>This is a centered container, and it will go till a specified width.</div>
-    <hr>
+    <div class="container-centered">
+      This is a centered container, and it will go till a specified width. Lorem
+      ipsum dolor sit amet consectetur, adipisicing elit. A quibusdam nam, rem
+      repellat aperiam numquam iste earum est, labore perferendis eum. Vitae
+      officiis quibusdam iste ut error, eaque nobis voluptatum. Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Dolores nobis enim
+      exercitationem aut consequatur libero error aspernatur voluptatem modi
+      reprehenderit eius tenetur molestiae provident tempora animi quae, sint
+      omnis repellendus.
+    </div>
+    <hr />
 
     <h2>@links</h2>
-    <a href="#">Primary Link</a>
-    <a href="#">Secondary Link</a>
-    <hr>
+    <a class="link--primary" href="#">Primary Link</a>
+    <a class="link--secondary" href="#">Secondary Link</a>
+    <hr />
 
     <h2>@lists</h2>
     <h3>Unordered list</h3>
     <ul>
-        <li>Apple Slices</li>
-        <li>Milk</li>
-        <li>Sandwich</li>
+      <li>Apple Slices</li>
+      <li>Milk</li>
+      <li>Sandwich</li>
     </ul>
 
     <h3>Unordered inline list</h3>
-    <ul>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact</li>
+    <ul class="list-unordered--inline">
+      <li class="list-unordered--inline__item">About</li>
+      <li class="list-unordered--inline__item">Projects</li>
+      <li class="list-unordered--inline__item">Contact</li>
     </ul>
 
     <h3>Reverse Ordered List</h3>
-    <ol>
-        <li>Freshen up</li>
-        <li>Brush my teeth</li>
-        <li>I wake up</li>
+    <ol reversed>
+      <li>Freshen up</li>
+      <li>Brush my teeth</li>
+      <li>I wake up</li>
     </ol>
-    <hr>
+    <hr />
 
     <h2>@nav</h2>
-    <nav>
-        <p>Navigation is used on the top of page and used to get to different pages</p>
-        <span>TheBrandName</span>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
+    <p>
+      Navigation is used on the top of page and used to get to different pages
+    </p>
+    <nav class="navbar">
+      <span class="navbar__brand-name">TheBrandName</span>
+      <ul class="list-unordered--inline navbar__links">
+        <li class="list-unordered--inline__item">
+          <a class="navbar__link" href="#">Link 1</a>
+        </li>
+        <li class="list-unordered--inline__item">
+          <a class="navbar__link" href="#">Link2</a>
+        </li>
+        <li class="list-unordered--inline__item">
+          <a class="navbar__link" href="#">Link3</a>
+        </li>
+      </ul>
     </nav>
-    <hr>
+    <hr />
 
     <h2>@header</h2>
-    <header>
-        <!-- Color Scheme - #5be7a9(Lime green shade) -->
-        <img src="./images/developer.svg" alt="hero-img">
-        <h1>Header Text</h1>
+    <header class="header">
+      <!-- Color Scheme - #5be7a9(Lime green shade) -->
+      <img class="header__img" src="./images/developer.svg" alt="hero-img" />
+      <h1 class="header__text">Header Text</h1>
     </header>
-    <hr>
+    <hr />
 
     <h2>@section</h2>
-    <p>A section is used to separate parts of pages. In marketing websites you would have seen a header followed by sections of features, team ,pricing, contact info, etc.</p>
+    <p>
+      A section is used to separate parts of pages. In marketing websites you
+      would have seen a header followed by sections of features, team ,pricing,
+      contact info, etc.
+    </p>
     <h3>@normal section</h3>
-    <section>
-        <h1>Level 1 heading inside section</h1>
-        <p>Text defininh many more things in the section.</p>
-        <a href="#">Primary Link</a>
+    <section class="normal-section">
+      <h1 class="normal-section__heading">Level 1 heading inside section</h1>
+      <p class="normal-section__content">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro,
+        repellendus dolores nesciunt sapiente labore earum numquam. Explicabo
+        maxime alias accusantium harum hic deserunt. Cupiditate, delectus!
+        Soluta perferendis ad tempora nesciunt!
+      </p>
+      <a class="link--primary" href="#">Primary Link</a>
     </section>
-    
+
     <h3>@an off-white section</h3>
-    <section>
-        <h1>Level 1 heading inside an off-white section</h1>
-        <p>Text defining the details regarding the off-white section</p>
-        <a href="#">Primary Link</a>
+    <section class="off-white-section">
+      <h1 class="off-white-section__heading">
+        Level 1 heading inside an off-white section
+      </h1>
+      <p class="off-white-section__content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, repellat
+        vitae corrupti placeat quibusdam earum doloribus molestiae accusantium
+        voluptatem excepturi tenetur odit, saepe, asperiores iusto nobis
+        expedita cum quae mollitia. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Facere tenetur quia iusto nihil quas exercitationem
+        natus, deserunt mollitia distinctio iste molestiae quaerat recusandae
+        explicabo praesentium hic consectetur dolorem a perferendis.
+      </p>
+      <a class="link--secondary" href="#">Secondary Link</a>
     </section>
-    <hr>
+    <hr />
 
     <h2>@footer</h2>
-    <footer>
-<!-- We can't use heading tags like h1, h2 ... and so on in footer according to styling guide -->
-        <p>Some heading inside footer</p>
-        <ul>
-            <li><a href="">Footer link 1</a></li>
-            <li><a href="">Footer link 2</a></li>
-            <li><a href="">Footer link 3</a></li>
-        </ul>
+    <footer class="footer">
+      <!-- We can't use heading tags like h1, h2 ... and so on in footer according to styling guide -->
+      <p class="footer__copyright-info">
+        brand logo and copyright info(if any)
+      </p>
+      <section class="footer__main-content">
+        <section class="footer__main-content__subsection_1">
+          <p class="footer__text">Some heading inside footer</p>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="">Footer link 1</a></li>
+            <li><a class="footer__link" href="">Footer link 2</a></li>
+            <li><a class="footer__link" href="">Footer link 3</a></li>
+          </ul>
+        </section>
+
+        <section class="footer__main-content__subsection_2">
+          <p class="footer__text">Some heading inside footer</p>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="">Footer link 1</a></li>
+            <li><a class="footer__link" href="">Footer link 2</a></li>
+            <li><a class="footer__link" href="">Footer link 3</a></li>
+          </ul>
+        </section>
+      </section>
     </footer>
-    </body>
+  </body>
 </html>

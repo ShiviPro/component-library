@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap");
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Global custom properties */
+:root {
+  /* Typography related */
+  --line-spacing: 150%;
+
+  /* Color related*/
+  --base-color: #0be881;
+  --base-light: #51f7aa;
+  --base-dark: #079754;
+  --black: #3d3d3d;
+  --white: #ffffff;
+  --off-white: #f1f2f6;
+}
+
+::selection {
+  background-color: var(--base-dark);
+  color: var(--white);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.link--primary {
+  text-decoration: none;
+  background-color: var(--base-color);
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 800;
+  padding: 15px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.link--primary:hover {
+  background-color: var(--base-dark);
+  cursor: pointer;
+}
+
+.link--secondary {
+  text-decoration: none;
+  background-color: var(--white);
+  color: var(--base-color);
+  border: 1px solid var(--base-dark);
+  font-size: 1.3rem;
+  font-weight: 800;
+  padding: 15px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.link--secondary:hover {
+  background-color: var(--base-light);
+  color: var(--white);
+}
+
+.list-unordered--inline {
+  display: inline;
+  padding-left: 0;
+}
+
+.list-unordered--inline__item {
+  display: inline;
+  margin-right: 3vw;
+}
+
+.navbar {
+  background-color: var(--base-dark);
+  color: var(--white);
+  padding: 5vh 2vw;
+  display: grid;
+  grid-column-gap: 5vw;
+  grid-template-columns: 1fr 1fr;
+}
+
+.navbar__brand-name {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.navbar__brand-name::selection {
+  background-color: var(--base-light);
+  color: var(--white);
+}
+
+.navbar__links {
+  justify-self: right;
+}
+
+.navbar__link {
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.navbar__link::selection {
+  background-color: var(--base-light);
+  color: var(--white);
+}
+
+.navbar__link:hover {
+  text-decoration: underline;
+}
+
+.header {
+  text-align: center;
+}
+
+.header__img {
+  max-width: 80vw;
+}
+
+.header__text {
+  font-weight: 500;
+  color: var(--base-light);
+}
+
+.normal-section {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.container-centered {
+  margin: 0 auto;
+  padding: 0 15vw;
+}
+
+.normal-section__heading {
+  margin-top: 0;
+}
+
+.normal-section__content {
+  text-align: left;
+  margin: 10px 20vw;
+  font-size: 1.1rem;
+}
+
+.off-white-section {
+  text-align: center;
+  background: var(--off-white);
+  padding: 30px 0;
+}
+
+.off-white-section__heading {
+  margin-top: 0;
+}
+
+.off-white-section__content {
+  text-align: left;
+  margin: 10px 20vw;
+  font-size: 1.1rem;
+}
+
+hr {
+  margin: 25px 0;
+}
+
+.footer {
+  background: var(--base-dark);
+  color: var(--white);
+  font-size: 1.1rem;
+  padding: 20px 0 20px 20px;
+}
+
+.footer__copyright-info {
+  text-align: center;
+}
+
+.footer__copyright-info::selection {
+  background-color: var(--base-light);
+  color: var(--white);
+}
+
+.footer__main-content {
+  padding: 0 10vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5vw;
+}
+
+.footer__main-content__subsection_1 {
+  justify-self: right;
+}
+
+.footer__main-content__subsection_2 {
+  justify-self: left;
+}
+
+.footer__text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.footer__text::selection {
+  background-color: var(--base-light);
+  color: var(--white);
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: white;
+  font-size: 150%;
+  font-weight: 500;
+}
+
+.footer__link::selection {
+  background-color: var(--base-light);
+  color: var(--white);
+}
+
+/* Component styling for smaller displays */
+@media (max-width: 741px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+
+  .navbar__links,
+  .navbar__brand-name {
+    justify-self: center;
+  }
+
+  .navbar__brand-name,
+  .navbar__link,
+  .header__text,
+  .normal-section__heading,
+  .off-white-section__heading {
+    font-size: 8vw;
+  }
+
+  .navbar__links {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 2vw;
+  }
+
+  .navbar__link {
+    text-decoration: var(--off-white) underline;
+  }
+
+  .normal-section__content,
+  .off-white-section__content {
+    margin: 10px 10vw;
+  }
+
+  .footer__main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .footer__main-content__subsection_1,
+  .footer__main-content__subsection_2 {
+    justify-self: center;
+  }
+}
